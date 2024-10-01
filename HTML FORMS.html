@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://127.0.0.1:5500/HTML%20FORMS.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+        <h1>HTML Forms</h1>
+        <h2>Text input fields</h2>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+        </form>
+        <h2> Radio buttons</h2>
+            <form>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+
+            </form>
+            <h2>Checkbox</h2>
+            <form>
+                <input type="checkbox" id="vehicle1" name="bike">
+                <label for="vehicle">I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="car">
+                <label for="car">I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="Cycle">
+                <label for="cycle">I have a cycle</label><br>
+            </form>
+            <h2>A form with submit button</h2>
+            <form action="http://127.0.0.1:5500/action_page.php">
+                <label for="fname">First Name</label><br>
+                <input type="text" id="fname" name="fname" value="sourav"><br>
+                <label for="lname">Last name</label><br>
+                <input type="text" id="lname" name="lname" value="debnath"><br>
+                <input type="submit" value="SUbmit">
+            </form>
+            <h2>A form with target attribute</h2>
+            <p>When submitting this form, the result will be opened in a new browser tab:</p>
+            <form action="http://127.0.0.1:5500/action_page.php" target="_blank">
+                <label for="fname">First Name</label><br>
+                <input type="text" id="fname" name="fname" value="sourav"><br>
+                <label for="lname">Last name</label><br>
+                <input type="text" id="lname" name="lname" value="debnath"><br>
+                <input type="submit" value="SUbmit">
+            </form>
+            <h1>The form autocomplete attribute</h1>
+
+            <p>Fill in and submit the form, then reload the page, start to fill in the form again - and see how autocomplete works.</p>
+
+            <p>Then, try to set autocomplete to "off".</p>
+
+            <form action="http://127.0.0.1:5500/action_page.php" autocomplete="off">
+                 <label for="fname">First name:</label>
+                 <input type="text" id="fname" name="fname"><br><br>
+                 <label for="email">Email:</label>
+                 <input type="text" id="email" name="email"><br><br>
+                 <input type="submit">
+            </form>
+            <h1>the select element</h1>
+            <p>the select element defines a drop down list</p>
+            <form action="http://127.0.0.1:5500/action_page.php">
+                <label for="department">Choose a Department:</label>
+                <select id="department" name="department">
+                    <option value="CSE">CSE</option>
+                    <option value="Math">Math</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Physics">Physics</option>
+                    <option value="LAW">LAW</option>
+                    <option value="Marketing">Marketing</option>
+                </select><br>
+                <input type="submit" value="SUBMIT">
+
+            </form>
+            <h2>Pre-selected Option</h2>
+
+            <p>You can preselect an option with the selected attribute:</p>
+            <form action="http://127.0.0.1:5500/action_page.php">
+                <label for="department">Choose a Department:</label>
+                <select id="department" name="department">
+                    <option value="CSE">CSE</option>
+                    <option value="Math">Math</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Physics">Physics</option>
+                    <option value="LAW" selected="">LAW</option>
+                    <option value="Marketing">Marketing</option>
+                </select><br>
+                <input type="submit" value="SUBMIT">
+
+
+
+       
+        
+        
+
+
+
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</form></body></html>
